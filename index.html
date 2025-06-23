@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palak - Shopify Developer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white py-6">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold">Palak</h1>
+      <p class="text-xl">Shopify Developer with 2 Years of Experience</p>
+      <a href="#projects" class="mt-4 inline-block bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-200">View My Work</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-6">About Me</h2>
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+        Hi, I'm Palak, a passionate Shopify developer with 2 years of experience building custom themes, apps, and integrations for e-commerce businesses. I specialize in Liquid, JavaScript, and Shopify APIs, delivering user-friendly and scalable solutions. Let's create something amazing together!
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="bg-white py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-6">My Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Custom Shopify Theme</h3>
+          <p class="text-gray-600 mb-4">Developed a responsive theme for a fashion store, optimizing for mobile and SEO.</p>
+          <p class="text-sm text-gray-500">Tech: Liquid, JavaScript, Tailwind CSS</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">View Project</a>
+        </div>
+        <!-- Project 2 -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Shopify App Integration</h3>
+          <p class="text-gray-600 mb-4">Integrated a custom payment gateway using Shopify APIs for a client.</p>
+          <p class="text-sm text-gray-500">Tech: Node.js, GraphQL, Shopify APIs</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">View Project</a>
+        </div>
+        <!-- Add more projects as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-6">My Skills</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="bg-blue-600 text-white px-4 py-2 rounded-full">Shopify</span>
+        <span class="bg-blue-600 text-white px-4 py-2 rounded-full">Liquid</span>
+        <span class="bg-blue-600 text-white px-4 py-2 rounded-full">JavaScript</span>
+        <span class="bg-blue-600 text-white px-4 py-2 rounded-full">HTML/CSS</span>
+        <span class="bg-blue-600 text-white px-4 py-2 rounded-full">Shopify APIs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-blue-600 text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+      <p class="text-lg mb-4">Interested in working together? Reach out to me!</p>
+      <div class="flex justify-center gap-6">
+        <a href="mailto:your.email@example.com" class="text-white hover:underline">Email</a>
+        <a href="https://linkedin.com/in/yourprofile" class="text-white hover:underline">LinkedIn</a>
+        <a href="https://github.com/yourprofile" class="text-white hover:underline">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4 text-center">
+    <p>&copy; 2025 Palak. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
