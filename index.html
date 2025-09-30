@@ -3,19 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title style="justify-self 	= center;">Palak - Shopify Developer Portfolio</title>
+  <title style="justify-self 	= center;">Palak - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 <style>
 .bg-600 {background-color:#68e46cdb;}
 p {text-align: justify; justify-self: center;}
+
+
+h1{
+   background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+}
+
 </style>
 </head>
 <body class="bg-gray-100 font-sans">
   <!-- Header -->
   <header class="bg-600 text-white py-20">
     <div class="container mx-auto text-center">
-      <h1 class="text-4xl font-bold">I'm Palak Parekh</h1></br></br>
-      <p class="text-xl">A Shopify expert & web developer from India</p></br></br>
+      <h1 class="text-3xl font-bold">Hey! I'm Palak Parekh</h1></br></br>
+      <p class="text-xl">A Shopify expert & web developer</p></br></br>
       <a href="#projects" class="mt-4 inline-block bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-200">View My Work</a>
     </div>
   </header>
@@ -25,9 +53,9 @@ p {text-align: justify; justify-self: center;}
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-6">About Me</h2>
       <p class="text-lg text-gray-700 max-w-2xl mx-auto">
-  Hi, I'm Palak — a passionate Shopify Developer with 2+ years of hands-on experience building and customizing high-performing eCommerce stores. I specialize in creating responsive, user-friendly Shopify websites tailored to each brand’s unique goals. My expertise includes Liquid, HTML, CSS, JavaScript, and third-party app integrations.
-  <br><br>
-  In addition to Shopify, I also have experience working with WordPress and Squarespace — helping clients build elegant, functional websites across platforms. Whether it's a custom Shopify theme, a WordPress business site, or a clean Squarespace layout, I ensure every project is crafted with performance, clarity, and conversion in mind.
+  Hi, I'm Palak — a passionate Shopify Developer with hands-on experience building and customizing high-performing eCommerce stores. I specialize in creating responsive, user-friendly Shopify websites tailored to each brand’s unique goals.<br><br>
+
+  In addition to Shopify, I also have experience working with WordPress, Squarespace and other CMS platforms — helping clients build elegant, functional websites across platforms. Whether it's a custom Shopify theme, a WordPress business site, or a clean Squarespace layout, I ensure every project is crafted with performance, clarity, and conversion in mind.
 </p>
 
     </div>
@@ -53,16 +81,15 @@ p {text-align: justify; justify-self: center;}
           <h3 class="text-xl font-semibold mb-2">WordPress & Squarespace Development</h3>
           <p class="text-gray-600 mb-4">Building elegant, user-friendly websites using WordPress and Squarespace. Ideal for portfolios, small businesses, and service-based websites with custom layout and SEO optimization.</p>
           </div>
-        <!-- Add more projects as needed -->
       </div>
     </div>
   </section>
   
-  <section id="projects">
+  <section id="projects" style="padding-left: 15px; padding-right: 15px;">
   <!-- My Work Section -->
 <!-- My Work Section -->
 <div class="mt-12">
-  <h3 class="text-2xl font-bold text-center mb-6">Live Shopify Projects</h3>
+  <h3 class="text-2xl font-bold text-center mb-6">Shopify Projects</h3>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     
     <!-- Project 1 -->
@@ -111,16 +138,50 @@ p {text-align: justify; justify-self: center;}
 </div>
   </section>
 
+
+<section id="other-projects" style="padding-left: 15px; padding-right: 15px;">
+  <!-- My Work Section -->
+<!-- My Work Section -->
+<div class="mt-12">
+  <h3 class="text-2xl font-bold text-center mb-6">Other Projects</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+    <!-- Project 1 -->
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <h4 class="text-xl font-semibold mb-2">Cravings Coffee Company</h4>
+      <p class="text-gray-600 mb-4">Developed a vibrant and engaging Squarespace website for a coffee brand, with custom layouts, intuitive navigation experience.</p>
+      <a href="https://www.cravingscoffeecompany.ca/" target="_blank" class="text-blue-600 font-semibold hover:underline">Visit Site →</a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <h4 class="text-xl font-semibold mb-2">Kansas Whiskey</h4>
+      <p class="text-gray-600 mb-4">Built a liquor store on WordPress featuring a conversion-focused design to boost customer engagement and sales.</p>
+      <a href="https://kansaswhiskey.com/" target="_blank" class="text-blue-600 font-semibold hover:underline">Visit Site →</a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <h4 class="text-xl font-semibold mb-2">Tracie Vernon</h4>
+      <p class="text-gray-600 mb-4">Designed a professional WordPress portfolio website with an elegant layout, event integration and user-friendly presentation.</p>
+      <a href="https://tracievernon.com/" target="_blank" class="text-blue-600 font-semibold hover:underline">Visit Site →</a>
+    </div>
+</div>
+</section>
+
   <!-- Skills Section -->
   <section id="skills" class="py-12">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-6"> Specialization</h2>
       <div class="flex flex-wrap justify-center gap-4">
         <span class="bg-600 text-white px-4 py-2 rounded-full">Shopify</span>
+<span class="bg-600 text-white px-4 py-2 rounded-full">Wordpress</span>
+<span class="bg-600 text-white px-4 py-2 rounded-full">Sqaurespace</span>
         <span class="bg-600 text-white px-4 py-2 rounded-full">Liquid</span>
         <span class="bg-600 text-white px-4 py-2 rounded-full">JavaScript</span>
         <span class="bg-600 text-white px-4 py-2 rounded-full">HTML/CSS</span>
         <span class="bg-600 text-white px-4 py-2 rounded-full">Shopify APPs</span>
+      
       </div>
     </div>
   </section>
