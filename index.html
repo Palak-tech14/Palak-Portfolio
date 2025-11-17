@@ -6,55 +6,83 @@
   <title style="justify-self 	= center;">Palak - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 <style>
-.bg-600 {background-color:#68e46cdb;}
-p {text-align: justify; justify-self: center;}
 
-
-h1{
-   background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
+.bg-600 {background: #68e46cdb;}
+p {text-align: justify;}
+/* --- Animated Gradient Text (optional for headings) --- */
+h1 {
+  background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
   background-size: 200% auto;
-  color: #fff;
+  color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
-  display: inline-block;
-      font-size: 190px;
+  animation: textclip 3s linear infinite;
 }
-
 @keyframes textclip {
   to {
     background-position: 200% center;
+  }
 }
 
+/* --- Scroll Fade & Slide Animations --- */
+.fade-up, .fade-left, .fade-right {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-left {
+  transform: translateX(-40px);
+}
+
+.fade-right {
+  transform: translateX(40px);
+}
+
+/* When element is visible */
+.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* --- Hover Animation for Cards or Boxes --- */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional subtle fade-in for text content */
+.fade-text {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+.fade-text.show {
+  opacity: 1;
+}
 </style>
 </head>
 <body class="bg-gray-100 font-sans">
   <!-- Header -->
-  <header class="bg-600 text-white py-20">
+  <header class="bg-600 text-white py-20 fade-up">
     <div class="container mx-auto text-center">
       <h1 class="text-3xl font-bold">Hey! I'm Palak Parekh</h1></br></br>
-      <p class="text-xl">A Shopify expert & web developer</p></br></br>
+      <p class="text-xl" style="justify-self:center;">A Shopify expert & web developer</p></br></br>
       <a href="#projects" class="mt-4 inline-block bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-200">View My Work</a>
     </div>
   </header>
 
   <!-- About Section -->
   <section id="about" class="py-12">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 fade-up">
       <h2 class="text-3xl font-bold text-center mb-6">About Me</h2>
-      <p class="text-lg text-gray-700 max-w-2xl mx-auto">
-  Hi, I'm Palak — a passionate Shopify Developer with hands-on experience building and customizing high-performing eCommerce stores. I specialize in creating responsive, user-friendly Shopify websites tailored to each brand’s unique goals.<br><br>
-
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto fade-left">
+  Hi, I'm Palak — a passionate Shopify Developer with hands-on experience building and customizing high-performing eCommerce stores. I specialize in creating responsive, user-friendly Shopify websites tailored to each brand’s unique goals.</p>
+</br>
+ <p class="text-lg text-gray-700 max-w-2xl mx-auto fade-right">
   In addition to Shopify, I also have experience working with WordPress, Squarespace and other CMS platforms — helping clients build elegant, functional websites across platforms. Whether it's a custom Shopify theme, a WordPress business site, or a clean Squarespace layout, I ensure every project is crafted with performance, clarity, and conversion in mind.
 </p>
 
@@ -62,24 +90,24 @@ h1{
   </section>
 
   <!-- Projects Section -->
-  <section class="bg-white py-12">
+  <section class="bg-white py-12 fade-up">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-6">What I do.</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Skill 1 -->
-        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md hover-card">
           <h3 class="text-xl font-semibold mb-2">Shopify Store Development</h3>
-          <p class="text-gray-600 mb-4">Setting up a fully functional and visually appealing Shopify store from start to finish. From back end check out settings, to front end product pages, social media integration, and more.</p>
+          <p class="text-gray-600 mb-4 fade-text">Setting up a fully functional and visually appealing Shopify store from start to finish. From back end check out settings, to front end product pages, social media integration, and more.</p>
           </div>
         <!-- Skill 2 -->
-        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md hover-card">
           <h3 class="text-xl font-semibold mb-2">Theme Customization</h3>
-          <p class="text-gray-600 mb-4">Customizing themes to uniquely suit the goals of your product, brand, and company. This includes integrated affiliate products from other e-commerce platforms.</p>
+          <p class="text-gray-600 mb-4 fade-text">Customizing themes to uniquely suit the goals of your product, brand, and company. This includes integrated affiliate products from other e-commerce platforms.</p>
           </div>
 	<!-- Skill 3 -->
-        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md hover-card">
           <h3 class="text-xl font-semibold mb-2">WordPress & Squarespace Development</h3>
-          <p class="text-gray-600 mb-4">Building elegant, user-friendly websites using WordPress and Squarespace. Ideal for portfolios, small businesses, and service-based websites with custom layout and SEO optimization.</p>
+          <p class="text-gray-600 mb-4 fade-text">Building elegant, user-friendly websites using WordPress and Squarespace. Ideal for portfolios, small businesses, and service-based websites with custom layout and SEO optimization.</p>
           </div>
       </div>
     </div>
@@ -88,47 +116,47 @@ h1{
   <section id="projects" style="padding-left: 15px; padding-right: 15px;">
   <!-- My Work Section -->
 <!-- My Work Section -->
-<div class="mt-12">
-  <h3 class="text-2xl font-bold text-center mb-6">Shopify Projects</h3>
+<div class="mt-12 fade-up">
+  <h2 class="text-2xl font-bold text-center mb-6">Shopify Projects</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     
     <!-- Project 1 -->
-    <div class="bg-white p-6 rounded-lg shadow-md">
+    <div class="bg-white p-6 rounded-lg shadow-md fade-up hover-card">
       <h4 class="text-xl font-semibold mb-2">Renegade Lemonade Wine</h4>
       <p class="text-gray-600 mb-4">Fun and vibrant Shopify store for a flavored wine brand, featuring custom layouts and smooth shopping experience.</p>
       <a href="https://renegadelemonadewine.com/" target="_blank" class="text-blue-600 font-semibold hover:underline">Visit Site →</a>
     </div>
 
     <!-- Project 2 -->
-    <div class="bg-white p-6 rounded-lg shadow-md">
+    <div class="bg-white p-6 rounded-lg shadow-md hover-card">
       <h4 class="text-xl font-semibold mb-2">Primo Liquors</h4>
       <p class="text-gray-600 mb-4">Multi-location liquor store with advanced filtering, product search, and a clean, conversion-focused design.</p>
       <a href="https://primoliquors.com/" target="_blank" class="text-blue-600 font-semibold hover:underline">Visit Site →</a>
     </div>
 
     <!-- Project 3 -->
-    <div class="bg-white p-6 rounded-lg shadow-md">
+    <div class="bg-white p-6 rounded-lg shadow-md hover-card">
       <h4 class="text-xl font-semibold mb-2">Bottle Shop & Tasting Room</h4>
       <p class="text-gray-600 mb-4">Minimal and elegant wine & spirits store with event integration and a modern design.</p>
       <a href="https://bottleshopandtastingroom.com/" target="_blank" class="text-blue-600 font-semibold hover:underline">Visit Site →</a>
     </div>
 
     <!-- Project 4 -->
-    <div class="bg-white p-6 rounded-lg shadow-md">
+    <div class="bg-white p-6 rounded-lg shadow-md hover-card">
       <h4 class="text-xl font-semibold mb-2">Boyd & Blair</h4>
       <p class="text-gray-600 mb-4">High-end vodka brand site with strong storytelling, custom graphics, and product showcase.</p>
       <a href="https://buyboydandblair.com/" target="_blank" class="text-blue-600 font-semibold hover:underline">Visit Site →</a>
     </div>
 
     <!-- Project 5 -->
-    <div class="bg-white p-6 rounded-lg shadow-md">
+    <div class="bg-white p-6 rounded-lg shadow-md hover-card">
       <h4 class="text-xl font-semibold mb-2">TrendyBay</h4>
       <p class="text-gray-600 mb-4">A New Zealand-based Shopify store offering trendy fashion with a clean UI and easy navigation.</p>
       <a href="https://trendybay.co.nz/" target="_blank" class="text-blue-600 font-semibold hover:underline">Visit Site →</a>
     </div>
 
     <!-- Project 6 -->
-    <div class="bg-white p-6 rounded-lg shadow-md">
+    <div class="bg-white p-6 rounded-lg shadow-md hover-card">
       <h4 class="text-xl font-semibold mb-2">Artniko</h4>
       <p class="text-gray-600 mb-4">UK-based wall art and home decor store with stylish product layouts and mobile-friendly design.</p>
       <a href="https://artniko.co.uk/" target="_blank" class="text-blue-600 font-semibold hover:underline">Visit Site →</a>
@@ -143,25 +171,25 @@ h1{
   <!-- My Work Section -->
 <!-- My Work Section -->
 <div class="mt-12">
-  <h3 class="text-2xl font-bold text-center mb-6">Other Projects</h3>
+  <h2 class="text-2xl font-bold text-center mb-6">Other Projects</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     
     <!-- Project 1 -->
-    <div class="bg-white p-6 rounded-lg shadow-md">
+    <div class="bg-white p-6 rounded-lg shadow-md hover-card">
       <h4 class="text-xl font-semibold mb-2">Cravings Coffee Company</h4>
       <p class="text-gray-600 mb-4">Developed a vibrant and engaging Squarespace website for a coffee brand, with custom layouts, intuitive navigation experience.</p>
       <a href="https://www.cravingscoffeecompany.ca/" target="_blank" class="text-blue-600 font-semibold hover:underline">Visit Site →</a>
     </div>
 
     <!-- Project 2 -->
-    <div class="bg-white p-6 rounded-lg shadow-md">
+    <div class="bg-white p-6 rounded-lg shadow-md hover-card">
       <h4 class="text-xl font-semibold mb-2">Kansas Whiskey</h4>
       <p class="text-gray-600 mb-4">Built a liquor store on WordPress featuring a conversion-focused design to boost customer engagement and sales.</p>
       <a href="https://kansaswhiskey.com/" target="_blank" class="text-blue-600 font-semibold hover:underline">Visit Site →</a>
     </div>
 
     <!-- Project 3 -->
-    <div class="bg-white p-6 rounded-lg shadow-md">
+    <div class="bg-white p-6 rounded-lg shadow-md hover-card">
       <h4 class="text-xl font-semibold mb-2">Tracie Vernon</h4>
       <p class="text-gray-600 mb-4">Designed a professional WordPress portfolio website with an elegant layout, event integration and user-friendly presentation.</p>
       <a href="https://tracievernon.com/" target="_blank" class="text-blue-600 font-semibold hover:underline">Visit Site →</a>
@@ -214,6 +242,17 @@ h1{
         });
       });
     });
+
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('show');
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.fade-up, .fade-left, .fade-right, .fade-text')
+  .forEach(el => observer.observe(el));
+
   </script>
 </body>
 </html>
